@@ -1,17 +1,25 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, VStack, Heading, Text, Button, Box, Image } from "@chakra-ui/react";
+import { FaRocket } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container centerContent maxW="container.xl" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <VStack spacing={8}>
+        <Box p={5} shadow="md" borderWidth="1px" borderRadius="lg">
+          <Heading fontSize="4xl" textAlign="center">Welcome to Your SaaS Startup</Heading>
+          <Text mt={4} fontSize="md" textAlign="center">
+            Revolutionizing the way you do business with state-of-the-art solutions.
+          </Text>
+        </Box>
+        <Image
+          borderRadius="full"
+          boxSize="150px"
+          src="https://via.placeholder.com/150"
+          alt="SaaS Product"
+        />
+        <Button rightIcon={<FaRocket />} colorScheme="blue" variant="solid">
+          Get Started
+        </Button>
       </VStack>
     </Container>
   );
